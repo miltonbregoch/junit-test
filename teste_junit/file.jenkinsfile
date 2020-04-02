@@ -1,1 +1,0 @@
-archiveArtifacts 'target/*.jar'
