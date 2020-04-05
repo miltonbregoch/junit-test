@@ -6,7 +6,7 @@ pipeline {
     }
 	 
 	parameters{
-		string(name: 'JAVA_HOME', defaultValue: 'C:\Program Files\Java\jdk-14', description: 'JDK', )
+		string(name: 'JAVA_HOME', defaultValue: 'C:/Program Files/Java/jdk-14', description: 'JDK', )
 	}
 	
     stages { 
