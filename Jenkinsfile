@@ -12,8 +12,8 @@ pipeline {
     stages { 
         stage('STAGE 00'){ 
             steps{
-                withAnt(installation: 'C:\ant') {
-				bat "ant C:\Program Files (x86)\Jenkins\workspace\junit-teste\Build.xml"
+                withAnt(installation: 'C:/ant') {
+				bat "ant C:/Program Files (x86)/Jenkins/workspace/junit-teste/Build.xml"
 				}
             }
         }
