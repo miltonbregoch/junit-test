@@ -75,21 +75,21 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-    <target name="TestJunit">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="teste_junit.TestJunit" todir="${junit.output.dir}"/>
-            <jvmarg line="-ea"/>
-            <classpath refid="run.TestJunit.classpath"/>
-        </junit>
-    </target>
-    <target name="junitreport">
-        <junitreport todir="${junit.output.dir}">
-            <fileset dir="${junit.output.dir}">
-                <include name="TEST-*.xml"/>
-            </fileset>
-            <report format="frames" todir="${junit.output.dir}"/>
-        </junitreport>
-    </target>
+
+	<target name="test" depends="compile">
+		<junit fork="yes" forkmode="once"  printsummary="true" showoutput="true" failureproperty="failed-test" haltonfailure="true" >
+			<formatter type="plain" usefile="false" />
+			<classpath location="build/classes/" />
+			<classpath refid="teste_junit.classpath" />
+			<batchtest fork="yes" todir="${artifacts.dir}/reports">
+				<fileset dir="build/classes/" >
+					<include name="**/*Test*.class" />
+				</fileset>
+			</batchtest>
+		</junit>
+	</target>
+	<target name="jar" depends="test">
+		<jar destfile="target/jenkins-pip.jar" basedir="build/classes/" />
+	</target>
+	
 </project>
