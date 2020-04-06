@@ -76,7 +76,7 @@
         <antcall target="build"/>
     </target>
 
-	<target name="test" depends="build-eclipse-compiler">
+	<target name="test" depends="build-project">
 		<junit fork="yes" forkmode="once"  printsummary="true" showoutput="true" failureproperty="failed-test" haltonfailure="true" >
 			<formatter type="plain" usefile="false" />
 			<classpath location="build/classes/" />
