@@ -12,9 +12,9 @@ pipeline {
     stages { 
         stage('STAGE 00'){ 
             steps{
-                withAnt(installation: 'Version 1.9.6', jdk: 'JDK 7u80') {
-				bat "ant C:/Program Files (x86)/Jenkins/workspace/junit-teste/Build.xml"
-				}
+                withAnt{
+			  bat "ant C:/Program Files (x86)/Jenkins/workspace/junit-teste/Build.xml"
+			}
             }
         }
     } 
