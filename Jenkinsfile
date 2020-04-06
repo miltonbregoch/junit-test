@@ -15,6 +15,7 @@ pipeline {
                 withAnt{
 			  //bat "ant C:\\Program Files (x86)\\Jenkins\\workspace\\junit-pip\\build.xml"
 			  bat "ant -file build.xml"
+			  junit '**/junit-pip/*.xml'
 			}
             }
         }
