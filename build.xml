@@ -76,14 +76,14 @@
         <antcall target="build"/>
     </target>
 
-	<target name="test" depends="build-project">
+	<target name="test" depends="build-eclipse-compiler">
 		<junit fork="yes" forkmode="once"  printsummary="true" showoutput="true" failureproperty="failed-test" haltonfailure="true" >
 			<formatter type="plain" usefile="false" />
 			<classpath location="build/classes/" />
 			<classpath refid="teste_junit.classpath" />
 			<batchtest fork="yes" todir="${artifacts.dir}/reports">
 				<fileset dir="build/classes/" >
-					<include name="**/*Test*.class" />
+					<include name="**/TestJunit.class" />
 				</fileset>
 			</batchtest>
 		</junit>
