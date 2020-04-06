@@ -14,15 +14,7 @@ pipeline {
             steps{
                 withAnt{
 			  //bat "ant C:\\Program Files (x86)\\Jenkins\\workspace\\junit-pip\\build.xml"
-			  bat "ant"
-			}
-            }
-        }
-	stage('STAGE 01'){ 
-            steps{
-                withAnt{
-			  //bat "ant C:\\Program Files (x86)\\Jenkins\\workspace\\junit-pip\\build.xml"
-			  bat "ant -file build.xml test jar"
+			  bat "ant -file build.xml"
 			}
             }
         }
