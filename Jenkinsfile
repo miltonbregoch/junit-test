@@ -13,8 +13,8 @@ pipeline {
         stage('STAGE 00'){ 
             steps{
                 withAnt{
-			  Buildfile: "C:/Program Files (x86)/Jenkins/workspace/junit-teste/Build.xml"
-			  //bat "ant C:/Program Files (x86)/Jenkins/workspace/junit-teste/Build.xml"
+			  //Buildfile: "C:/Program Files (x86)/Jenkins/workspace/junit-teste/Build.xml"
+			  bat "ant C:\Program Files (x86)\Jenkins\workspace\junit-teste\Build.xml"
 			}
             }
         }
