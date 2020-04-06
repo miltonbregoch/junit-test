@@ -13,7 +13,7 @@ pipeline {
         stage('STAGE 00'){ 
             steps{
                 withAnt{
-			  bat "ant C:\\Program Files (x86)\\Jenkins\\workspace\\junit-pip\\Build.xml"
+			  bat "ant C:\\Program Files (x86)\\Jenkins\\workspace\\junit-pip\\build.xml"
 			}
             }
         }
