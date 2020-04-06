@@ -89,7 +89,7 @@
 		</junit>
 	</target>
 	<target name="jar" depends="test">
-		<jar destfile="target/jenkins-pip.jar" basedir="build/classes/" />
+		<jar destfile="junit/jenkins-pip.jar" basedir="build/classes/" />
 	</target>
 	
 </project>
