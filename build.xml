@@ -15,8 +15,8 @@
 	<target name="compile">
 		<mkdir dir="target/classes/"/>
 		<mkdir dir="target/classes-test/"/>
-		<javac destdir="target/classes/" srcdir="src/teste_junit/" debug="true" encoding="UTF-8" />
-		<javac destdir="target/classes-test/" srcdir="src/teste_junit/" classpathref="tests.classpath" debug="true" encoding="UTF-8" />
+		<javac destdir="target/classes/" srcdir="build/classes/teste_junit/" debug="true" encoding="UTF-8" />
+		<javac destdir="target/classes-test/" srcdir="build/classes/teste_junit/" classpathref="tests.classpath" debug="true" encoding="UTF-8" />
 	</target>
 	
 	<target name="test" depends="compile">
